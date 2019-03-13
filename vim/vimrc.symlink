@@ -3,9 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
-Plug 'mike-hearn/base16-vim-lightline'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'itchyny/lightline.vim'
 Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
@@ -19,6 +17,9 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-haml'
 Plug 'fatih/vim-go'
 Plug 'pangloss/vim-javascript'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -184,9 +185,7 @@ set spelllang=en
 let g:fzf_nvim_statusline = 0 " disable statusline overwriting
 nnoremap <C-P> :FZF<CR>
 
-" Lightline
-let g:lightline = {
-\ 'colorscheme': 'base16_irblack',
-\}
+" Airline
+let g:airline_theme='base16_seti'
 
 " vim:ts=2:sw=2:et
