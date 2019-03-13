@@ -14,6 +14,11 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-haml'
+Plug 'fatih/vim-go'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
@@ -25,6 +30,9 @@ filetype plugin indent on     " required
 " Colors
 "
 let base16colorspace=256
+if filereadable(expand("~/.vimrc_background"))
+  source ~/.vimrc_background
+endif
 
 " Settings
 "
@@ -81,6 +89,9 @@ set expandtab
 
 set nrformats-=octal
 set shiftround
+
+" set nowrap
+" set cc=0
 
 " Time out on key codes but not mappings.
 " Basically this makes terminal Vim work sanely.
