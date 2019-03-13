@@ -2,7 +2,7 @@
 The following a collection of my personal .dotfiles. Feel free to fork and modify to your delight.
 
 ### Install
-(optional) Fork [binarypie/.dotfiles][/binarypie/dotfiles] to your own repoistory.
+(optional) Fork [binarypie/.dotfiles](/binarypie/dotfiles) to your own repoistory.
 ```shell
 git clone git@github.com:binarypie/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
