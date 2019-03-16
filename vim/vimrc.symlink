@@ -30,8 +30,8 @@ filetype plugin indent on     " required
 "
 " Colors
 "
-let base16colorspace=256
 if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
   source ~/.vimrc_background
 endif
 
@@ -186,6 +186,6 @@ let g:fzf_nvim_statusline = 0 " disable statusline overwriting
 nnoremap <C-P> :FZF<CR>
 
 " Airline
-let g:airline_theme='base16_seti'
+let g:airline_theme='dracula'
 
 " vim:ts=2:sw=2:et
