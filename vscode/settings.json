@@ -1,0 +1,13 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.cursorStyle": "block",
+    "workbench.sideBar.location": "right",
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontSize": 12,
+    "editor.fontFamily": "'RobotoMono Nerd Font'",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontFamily": "'RobotoMono Nerd Font'",
+    "vsicons.dontShowNewVersionMessage": true
+}
