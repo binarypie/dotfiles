@@ -221,7 +221,7 @@ zstyle ':prezto:module:tmux:auto-start' local 'yes'
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 # Set the default session name:
-zstyle ':prezto:module:tmux:session' name ' '
+zstyle ':prezto:module:tmux:session' name 'Local'
 
 #
 # Utility

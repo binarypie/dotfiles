@@ -6,6 +6,9 @@ set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-pain-control'
 
+# Colors
+set -g default-terminal "screen-256color"
+
 # Prefix
 unbind C-b
 set-option -g prefix C-a
@@ -13,6 +16,10 @@ bind-key C-a send-prefix
 
 # Status Line
 set-option -g status-position top
+
+# Mouse Wheel
+set-option -g mouse on
+setw -g alternate-screen on
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
