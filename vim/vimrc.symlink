@@ -2,24 +2,25 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'cakebaker/scss-syntax.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'dart-lang/dart-vim-plugin'
 Plug 'editorconfig/editorconfig-vim'
-Plug '~/.fzf'
+Plug 'fatih/vim-go'
+Plug 'francoiscabrol/ranger.vim'
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-haml'
-Plug 'fatih/vim-go'
-Plug 'pangloss/vim-javascript'
-Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
+Plug '~/.fzf'
 
 call plug#end()
 
