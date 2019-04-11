@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'rbgrouleff/bclose.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'dart-lang/dart-vim-plugin'
@@ -12,7 +13,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdtree'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-haml'
@@ -188,5 +188,8 @@ nnoremap <C-P> :FZF<CR>
 
 " Airline
 let g:airline_theme='dracula'
+
+" Ranger
+let g:ranger_replace_netrw = 1
 
 " vim:ts=2:sw=2:et
