@@ -21,6 +21,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 Plug '~/.fzf'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'roxma/vim-tmux-clipboard'
+Plug 'tmux-plugins/vim-tmux'
 
 call plug#end()
 
