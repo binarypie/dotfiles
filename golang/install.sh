@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
+set -e
 
-curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+mkdir -p $HOME/Code/go
