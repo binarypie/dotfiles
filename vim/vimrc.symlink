@@ -24,6 +24,8 @@ Plug '~/.fzf'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'leafgarland/typescript-vim'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
