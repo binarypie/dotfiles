@@ -34,28 +34,43 @@ filetype off                  " required
 filetype plugin indent on     " required
 
 "
-" Colors
+" colors
 "
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
 
-" Settings
 "
-set noerrorbells                " No beeps
-set number                      " Show line numbers
-set backspace=indent,eol,start  " Makes backspace key more powerful.
-set showcmd                     " Show me what I'm typing
-set showmode                    " Show current mode.
+" highlight customizations
+"
+function! s:base16_customize() abort
+  call Base16hi("SpellBad", g:base16_gui01, g:base16_gui08,
+  g:base16_cterm01, g:base16_cterm08, "bold,italic", "")
+  call Base16hi("SpellCap", g:base16_gui01, g:base16_gui03,
+  g:base16_cterm01, g:base16_cterm03, "bold,italic", "")
+endfunction
 
-set noswapfile                  " Don't use swapfile
-set nobackup					          " Don't create annoying backup files
+augroup on_change_colorschema
+  autocmd!
+  autocmd ColorScheme * call s:base16_customize()
+augroup END
+
+" settings
+"
+set noerrorbells                " no beeps
+set number                      " show line numbers
+set backspace=indent,eol,start  " makes backspace key more powerful.
+set showcmd                     " show me what i'm typing
+set showmode                    " show current mode.
+
+set noswapfile                  " don't use swapfile
+set nobackup					          " don't create annoying backup files
 set nowritebackup
-set splitright                  " Split vertical windows right to the current windows
-set splitbelow                  " Split horizontal windows below to the current windows
-set encoding=utf-8              " Set default encoding to UTF-8
-set autowrite                   " Automatically save before :next, :make etc.
+set splitright                  " split vertical windows right to the current windows
+set splitbelow                  " split horizontal windows below to the current windows
+set encoding=utf-8              " set default encoding to utf-8
+set autowrite                   " automatically save before :next, :make etc.
 set autoread                    " Automatically reread changed files without asking me anything
 set laststatus=2
 set hidden
