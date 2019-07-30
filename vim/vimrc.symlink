@@ -19,13 +19,11 @@ Plug 'tpope/vim-haml'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
 Plug '~/.fzf'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'tmux-plugins/vim-tmux'
-Plug 'leafgarland/typescript-vim'
-Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -46,19 +44,6 @@ augroup on_change_colorschema
   autocmd ColorScheme * call s:base16_customize()
 augroup END
 
-"
-" highlight customizations
-"
-let g:ale_set_highlights = 0
-function! s:base16_customize() abort
-  call Base16hi("SpellBad", g:base16_gui01, g:base16_gui08,
-  g:base16_cterm01, g:base16_cterm08, "bold,italic", "")
-  call Base16hi("SpellCap", g:base16_gui01, g:base16_gui03,
-  g:base16_cterm01, g:base16_cterm03, "bold,italic", "")
-endfunction
-
-
-" settings
 "
 set noerrorbells                " no beeps
 set number                      " show line numbers
@@ -212,9 +197,12 @@ let g:fzf_nvim_statusline = 0 " disable statusline overwriting
 nnoremap <C-P> :FZF<CR>
 
 " Airline
-let g:airline_theme='dracula'
+let g:airline_theme='base16'
 
 " Ranger
 let g:ranger_replace_netrw = 1
+
+" jsonc
+autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " vim:ts=2:sw=2:et

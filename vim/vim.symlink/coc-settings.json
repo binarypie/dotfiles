@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema",
+  "description": "Configuration file for coc.nvim",
+  "additionalProperties": false,
+  "properties":{},
+  "languageserver": {
+    "dart": {
+      "command": "dart",
+      "args": [
+        "/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot",
+        "--lsp"
+        ],
+        "filetypes":
+        ["dart"],
+        "disableDynamicRegister":
+        true,
+        "trace.server":
+        "verbose"
+    }
+  }
+}
