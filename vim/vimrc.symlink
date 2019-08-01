@@ -188,6 +188,7 @@ nnoremap k gk
 
 " Paste
 set clipboard=unnamed
+set pastetoggle=<F3>
 
 " Spelling
 set spelllang=en
