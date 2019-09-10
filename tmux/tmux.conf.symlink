@@ -21,6 +21,9 @@ set-option -g status-position top
 set-option -g mouse on
 setw -g alternate-screen on
 
+# Focus
+set -g focus-events on
+
 # Vi Mode
 setw -g mode-keys vi
 bind-key -T copy-mode-vi v send-keys -X begin-selection

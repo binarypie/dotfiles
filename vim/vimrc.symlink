@@ -92,8 +92,8 @@ set showmatch
 set smarttab
 
 set et
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 set nrformats-=octal
@@ -189,6 +189,10 @@ nnoremap k gk
 " Paste
 set clipboard=unnamed
 set pastetoggle=<F3>
+noremap y "*y
+noremap p "*p
+noremap Y "+y
+noremap P "+p
 
 " Spelling
 set spelllang=en
@@ -205,5 +209,9 @@ let g:ranger_replace_netrw = 1
 
 " jsonc
 autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" invisible
+set listchars=tab:→\ ,nbsp:␣,trail:•,precedes:«,extends:»
+set list
 
 " vim:ts=2:sw=2:et
