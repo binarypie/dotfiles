@@ -2,32 +2,31 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'rbgrouleff/bclose.vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'cakebaker/scss-syntax.vim'
-" Plug 'chriskempson/base16-vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
 Plug 'francoiscabrol/ranger.vim'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+Plug 'google/vim-maktaba'
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'pangloss/vim-javascript'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'roxma/vim-tmux-clipboard'
 Plug 'ryanoasis/vim-devicons'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug '~/.fzf'
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'roxma/vim-tmux-clipboard'
-Plug 'tmux-plugins/vim-tmux'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
-Plug 'google/vim-glaive'
-Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 call glaive#Install()
@@ -211,6 +210,9 @@ nnoremap <C-P> :FZF<CR>
 " Airline
 " let g:airline_theme='base16'
 let g:airline_theme='base16'
+
+" Always Show Gutter
+set signcolumn=yes
 
 " Ranger
 let g:ranger_replace_netrw = 1
