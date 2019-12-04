@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-VERSION=2.9
+VERSION=3.0a
 echo "TMUX"
 if [ -d $DOTFILES/tmux/tmux-$VERSION ]; then
 	echo "Already up to date."
