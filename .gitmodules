@@ -1,0 +1,6 @@
+[submodule "gnome/themes/Nordic"]
+	path = gnome/themes/Nordic
+	url = git@github.com:EliverLara/Nordic.git
+[submodule "gnome/icons/Zafiro-icons"]
+	path = gnome/icons/Zafiro-icons
+	url = git@github.com:zayronxio/Zafiro-icons.git
