@@ -1,9 +1,8 @@
-# If applied, this commit will...
+# What
 
 
-# Why is this change being made?
+# Why
 
 
-# Provide links to any relevant tickets, URLs or other resources
-
+# Relevant Issues
 
