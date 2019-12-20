@@ -11,7 +11,7 @@ export PROJECTS="$HOME/Code"
 
 # Editors
 export EDITOR='vim'
-export VEDITOR='code'
+export VISUAL=$EDITOR
 
 # ZSH Files
 typeset -U config_files
