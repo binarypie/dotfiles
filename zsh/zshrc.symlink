@@ -48,3 +48,6 @@ unset config_files
 # shellcheck disable=SC1090
 [ -f ~/.localrc ] && . ~/.localrc
 . "/home/charles/.acme.sh/acme.sh.env"
+
+# Scaling
+export QT_AUTO_SCREEN_SCALE_FACTOR=1

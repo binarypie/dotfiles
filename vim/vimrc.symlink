@@ -3,27 +3,21 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
-Plug 'cakebaker/scss-syntax.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fatih/vim-go'
-Plug 'francoiscabrol/ranger.vim'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'google/vim-maktaba'
-Plug 'junegunn/fzf.vim'
-Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-Plug 'pangloss/vim-javascript'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rbgrouleff/bclose.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'ryanoasis/vim-devicons'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-haml'
-Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug '~/.fzf'
@@ -40,15 +34,6 @@ filetype plugin indent on     " required
 " colors
 "
 colorscheme nord
-"if filereadable(expand("~/.vimrc_background"))
-"  let base16colorspace=256
-"  source ~/.vimrc_background
-"endif
-"
-"augroup on_change_colorschema
-"  autocmd!
-"  autocmd ColorScheme * call s:base16_customize()
-"augroup END
 
 "
 set noerrorbells                " no beeps
@@ -177,8 +162,9 @@ let g:mapleader = ","
 " Change escape sequence
 inoremap <Leader><Tab> <Esc>`^
 
-" No Help, please
-nmap <F1> <Esc>
+" No Help, please escape instead
+map <F1> <Esc>
+imap <F1> <Esc>
 
 " Disable Arrow Remaps
 nnoremap <up> <nop>
@@ -213,9 +199,6 @@ let g:airline_theme='base16'
 
 " Always Show Gutter
 set signcolumn=yes
-
-" Ranger
-let g:ranger_replace_netrw = 1
 
 " jsonc
 autocmd FileType json syntax match Comment +\/\/.\+$+
