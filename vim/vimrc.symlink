@@ -5,13 +5,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'google/vim-maktaba'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rbgrouleff/bclose.vim'
 Plug 'junegunn/fzf.vim'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
 Plug 'roxma/vim-tmux-clipboard'
 Plug 'ryanoasis/vim-devicons'
 Plug 'terryma/vim-multiple-cursors'
@@ -101,7 +101,7 @@ set ttimeoutlen=10
 
 " Better Completion
 set complete=.,w,b,u,t
-set completeopt=longest,menuone
+set completeopt=menu,menuone,noinsert,noselect
 
 if &history < 1000
   set history=50
@@ -195,7 +195,7 @@ nnoremap <C-P> :FZF<CR>
 
 " Airline
 " let g:airline_theme='base16'
-let g:airline_theme='base16'
+let g:airline_theme='nord'
 
 " Always Show Gutter
 set signcolumn=yes
@@ -213,32 +213,47 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" CoC
-" use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-
-inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-
 " Autoformat
-autocmd FileType bzl AutoFormatBuffer buildifier
-autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
 autocmd FileType dart AutoFormatBuffer dartfmt
 autocmd FileType go AutoFormatBuffer gofmt
-" autocmd FileType gn AutoFormatBuffer gn
-autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
-" autocmd FileType java AutoFormatBuffer google-java-format
-" autocmd FileType python AutoFormatBuffer yapf
-" autocmd FileType python AutoFormatBuffer autopep8
-" autocmd FileType vue AutoFormatBuffer prettier
+autocmd FileType html,css,sass,scss,less,javascript,json,graphql AutoFormatBuffer prettier
+
+" LSC
+let g:lsc_auto_map = {
+\ 'defaults': v:true,
+\ 'PreviousReference': '<C-k>',
+\ 'NextReference': '<C-j>',
+\ 'Completion': 'completefunc',
+\}
+
+let g:lsc_enable_diagnostics = v:true
+
+function! s:check_back_space() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#manual_complete()
+
+autocmd CompleteDone * silent! pclose
+" npm install -g vscode-html-languageserver-bin
+" npm install -g vscode-css-languageserver-bin
+" go get golang.org/x/tools/gopls@latest
+" npm install -g typescript typescript-language-server
+let g:lsc_server_commands = {
+\  'go': {
+\    'command': 'gopls serve',
+\    'log_level': -1,
+\    'suppress_stderr': v:true,
+\  },
+\  'javascript': {
+\    'command': 'typescript-language-server --stdio',
+\    'log_level': -1,
+\    'suppress_stderr': v:true,
+\  }
+\}
 
 " vim:ts=2:sw=2:et
