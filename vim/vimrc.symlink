@@ -5,6 +5,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'google/vim-maktaba'
@@ -17,10 +18,13 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'tpope/vim-eunuch'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug '~/.fzf'
+
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 
 call plug#end()
 call glaive#Install()
@@ -194,7 +198,7 @@ let g:fzf_nvim_statusline = 0 " disable statusline overwriting
 nnoremap <C-P> :FZF<CR>
 
 " Airline
-" let g:airline_theme='base16'
+let g:airline_powerline_fonts = 1
 let g:airline_theme='nord'
 
 " Always Show Gutter
@@ -212,6 +216,14 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Icons
+let g:webdevicons_enable = 1
+let g:webdevicons_enable_airline_statusline = 1
+
+" Autocomplete
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 " Autoformat
 autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
@@ -244,11 +256,6 @@ autocmd CompleteDone * silent! pclose
 " go get golang.org/x/tools/gopls@latest
 " npm install -g typescript typescript-language-server
 let g:lsc_server_commands = {
-\  'go': {
-\    'command': 'gopls serve',
-\    'log_level': -1,
-\    'suppress_stderr': v:true,
-\  },
 \  'javascript': {
 \    'command': 'typescript-language-server --stdio',
 \    'log_level': -1,

@@ -1,5 +1,5 @@
 #!/bin/sh
-ln -s $DOTFILES/gnome/themes $HOME/.themes
-ln -s $DOTFILES/gnome/icons $HOME/.local/share/icons
+ln -s $HOME/.themes/Nordic $DOTFILES/gnome/themes/Nordic
+ln -s $HOME/.local/share/icons/Zafiro-icons $DOTFILES/gnome/icons/Zafiro-icons
 gsettings set org.gnome.desktop.interface gtk-theme "Nordic"
 gsettings set org.gnome.desktop.wm.preferences theme "Nordic"
