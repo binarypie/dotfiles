@@ -31,5 +31,5 @@ git pull upstream
 ./scripts/symlink
 ```
 
-### Uusage
+### Usage
 Modify and pull upstream when you want my changes.
