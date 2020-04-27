@@ -1,8 +1,4 @@
 #!/bin/sh
-# modern make
-if which mmake >/dev/null 2>&2; then
-	alias make='mmake'
-fi
 
 # exa is a better ls tool
 if which exa >/dev/null 2>&1; then
@@ -29,17 +25,15 @@ alias less="less -r"
 alias watch='watch '
 
 # open, pbcopy and pbpaste on linux
-if [ "$(uname -s)" != "Darwin" ]; then
-	if [ -z "$(command -v pbcopy)" ]; then
-		if [ -n "$(command -v xclip)" ]; then
-			alias pbcopy="xclip -selection clipboard"
-			alias pbpaste="xclip -selection clipboard -o"
-		elif [ -n "$(command -v xsel)" ]; then
-			alias pbcopy="xsel --clipboard --input"
-			alias pbpaste="xsel --clipboard --output"
-		fi
+if [ -z "$(command -v pbcopy)" ]; then
+	if [ -n "$(command -v xclip)" ]; then
+		alias pbcopy="xclip -selection clipboard"
+		alias pbpaste="xclip -selection clipboard -o"
+	elif [ -n "$(command -v xsel)" ]; then
+		alias pbcopy="xsel --clipboard --input"
+		alias pbpaste="xsel --clipboard --output"
 	fi
-	if [ -e /usr/bin/xdg-open ]; then
-		alias open="xdg-open"
-	fi
+fi
+if [ -e /usr/bin/xdg-open ]; then
+	alias open="xdg-open"
 fi

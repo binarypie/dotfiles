@@ -66,7 +66,7 @@ setopt inc_append_history
 setopt share_history
 
 # Dotfiles
-export DOTFILES="$HOME/.dotfiles"
+export DOTFILES="$HOME/dotfiles"
 
 # Projects
 export PROJECTS="$HOME/Code"

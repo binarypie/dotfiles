@@ -1,5 +1,5 @@
 #!/bin/sh
-export PATH=$PATH:/usr/local/node/bin
+export PATH=$PATH:/usr/lib/node_modules/npm/bin
 export NODE_PREFIX="$PROJECTS/node"
 export PATH="$PATH:$NODE_PREFIX/bin"
 export NODE_PATH="$NODE_PREFIX/lib/node_modules:$NODE_PATH"
