@@ -54,7 +54,7 @@ compinit
 zinit cdreplay -q # <- execute compdefs provided by rest of plugins
 
 # OMZ- TMUX
-export ZSH_TMUX_AUTOSTART="true"
+export ZSH_TMUX_AUTOSTART="false"
 export ZSH_TMUX_AUTOSTART_ONCE="true"
 export ZSH_TMUX_AUTOQUIT="true"
 
@@ -66,7 +66,7 @@ setopt inc_append_history
 setopt share_history
 
 # Dotfiles
-export DOTFILES="$HOME/dotfiles"
+export DOTFILES="$HOME/.dotfiles"
 
 # Projects
 export PROJECTS="$HOME/Code"
@@ -95,8 +95,9 @@ unset config_files
 
 # Local Config
 [ -f ~/.localrc ] && . ~/.localrc
-. "/home/charles/.acme.sh/acme.sh.env"
 
 # GPG
 export GPG_TTY=$(tty)
 ### End of Zinit's installer chunk
+### End of Zinit's installer chunk
+. "/home/charles/.acme.sh/acme.sh.env"

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Email / Nameo
+# Email / Name
 read -r -p "Enter Your Git Name: "  name
 read -r -p "Enter Your Git Email: "  email
 git config --global user.name "$name"
@@ -17,4 +17,4 @@ git config --global merge.conflictstyle diff3
 git config --global mergetool.prompt false
 
 # Templates
-git config --global commit.template ~/.dotfiles/git/template.txt
+git config --global commit.template $DOTFILES/git/template.txt

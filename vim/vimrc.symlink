@@ -2,33 +2,23 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'arcticicestudio/nord-vim'
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'google/vim-maktaba'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'junegunn/fzf.vim'
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
-Plug 'roxma/vim-tmux-clipboard'
+Plug 'ajh17/VimCompletesMe'
 Plug 'ryanoasis/vim-devicons'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tmux-plugins/vim-tmux'
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug '~/.fzf'
-
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'sainnhe/gruvbox-material'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 call glaive#Install()
-Glaive codefmt plugin[mappings]
+" Glaive codefmt plugin[mappings]
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -37,7 +27,10 @@ filetype plugin indent on     " required
 "
 " colors
 "
-colorscheme nord
+set termguicolors
+set background=dark
+let g:gruvbox_material_background = 'medium'
+colorscheme gruvbox-material
 
 "
 set noerrorbells                " no beeps
@@ -108,7 +101,7 @@ set complete=.,w,b,u,t
 set completeopt=menu,menuone,noinsert,noselect
 
 if &history < 1000
-  set history=50
+  set history=1000
 endif
 
 if &tabpagemax < 50
@@ -199,10 +192,13 @@ nnoremap <C-P> :FZF<CR>
 
 " Airline
 let g:airline_powerline_fonts = 1
-let g:airline_theme='nord'
+let g:airline_theme = 'gruvbox_material'
 
 " Always Show Gutter
 set signcolumn=yes
+
+" Nerd Tree
+map <Leader>f :NERDTreeToggle<CR>
 
 " jsonc
 autocmd FileType json syntax match Comment +\/\/.\+$+
@@ -222,44 +218,51 @@ let g:webdevicons_enable = 1
 let g:webdevicons_enable_airline_statusline = 1
 
 " Autocomplete
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
 
 " Autoformat
-autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
-autocmd FileType dart AutoFormatBuffer dartfmt
-autocmd FileType go AutoFormatBuffer gofmt
-autocmd FileType html,css,sass,scss,less,javascript,json,graphql AutoFormatBuffer prettier
+augroup autoformat_settings
+  " autocmd FileType bzl AutoFormatBuffer buildifier
+  " autocmd FileType c,cpp,proto,arduino AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  " autocmd FileType gn AutoFormatBuffer gn
+  autocmd FileType html,css,sass,scss,less,json,javascript AutoFormatBuffer prettier
+  " autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+  autocmd FileType rust AutoFormatBuffer rustfmt
+  " autocmd FileType vue AutoFormatBuffer prettier
+augroup END
 
 " LSC
 let g:lsc_auto_map = {
-\ 'defaults': v:true,
-\ 'PreviousReference': '<C-k>',
-\ 'NextReference': '<C-j>',
-\ 'Completion': 'completefunc',
+  \ 'defaults': v:true,
+  \  'GoToDefinition': 'gd',
+  \  'FindReferences': 'gr',
+  \  'Rename': 'gR',
+  \  'ShowHover': 'K',
+  \  'FindCodeActions': 'ga',
+  \  'Completion': 'omnifunc',
 \}
+let g:lsc_enable_autocomplete  = v:true
+let g:lsc_enable_diagnostics   = v:false
+let g:lsc_reference_highlights = v:false
+let g:lsc_trace_level          = 'off'
+set completeopt=menu,menuone,noinsert,noselect
 
-let g:lsc_enable_diagnostics = v:true
-
-function! s:check_back_space() abort "{{{
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction"}}}
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ deoplete#manual_complete()
-
-autocmd CompleteDone * silent! pclose
 " npm install -g vscode-html-languageserver-bin
 " npm install -g vscode-css-languageserver-bin
 " go get golang.org/x/tools/gopls@latest
 " npm install -g typescript typescript-language-server
 let g:lsc_server_commands = {
-\  'javascript': {
-\    'command': 'typescript-language-server --stdio',
+\ 'python' : 'pyls',
+\ 'javascript': 'typescript-language-server --stdio',
+\ 'css': 'css-languageserver --stdio',
+\ 'html': 'html-languageserver --stdio',
+\ 'go': {
+\    'command': 'gopls serve',
 \    'log_level': -1,
-\    'suppress_stderr': v:true,
+\    'suppress_stderr': v:true
 \  }
 \}
 

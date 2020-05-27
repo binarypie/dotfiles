@@ -5,6 +5,3 @@ for topic_folder in $DOTFILES/*; do
 		fpath=($topic_folder $fpath)
 	fi
 done
-
-# FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
