@@ -12,6 +12,7 @@ set -x DART_BIN /usr/lib/dart/bin
 set -x DART_PUB_CACHE_BIN $HOME/.pub-cache/bin
 set -x FLUTTER_BIN $PROJECTS/flutter/bin
 set -x FLUTTER_PUB_CACHE_BIN $HOME/Code/flutter/.pub-cache/bin
+set -x CHROME_EXECUTABLE /usr/bin/brave-browser
 fish_add_path $DART_BIN $DART_PUB_CACHE_BIN $FLUTTER_BIN $FLUTTER_PUB_CACHE_BIN
 
 # Golang
@@ -35,3 +36,4 @@ set -x FZF_DEFAULT_COMMAND 'rg --files --follow --no-ignore-vcs --hidden -g "!{n
 
 # VIM launches NVIM
 alias vim="nvim"
+alias vimdiff="vim -d"
