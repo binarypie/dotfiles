@@ -5,7 +5,8 @@
 import:
   - ~/.config/alacritty/colors.yml
   - ~/.config/alacritty/fonts.yml
-  - ~/.config/alacritty/dracula.yml
+  - ~/.config/alacritty/theme.yml
+
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
@@ -203,8 +204,8 @@ window:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
+# shell:
+#  program: /usr/bin/fish
 #  args:
 #    - --login
 
