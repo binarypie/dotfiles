@@ -1,0 +1,43 @@
+theme = "nightfox"
+
+[editor]
+color-modes =  true
+bufferline = "always"
+cursorline = true
+auto-pairs = false
+
+[editor.file-picker]
+hidden = false
+parents = false
+
+[editor.indent-guides]
+render = true
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.search]
+wrap-around = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = []
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = " "
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[keys.normal]
+"space" = { c = ":buffer-close", C = ":buffer-close!" }
+
+[keys.select]
+"space" = { c = ":clipboard-yank" }
