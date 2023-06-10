@@ -11,6 +11,9 @@ if status is-interactive
     set --global hydro_color_prompt $fish_color_command
     set --global hydro_color_duration $fish_color_param
 
+    set -Ux EXA_STANDARD_OPTIONS --icons
+
     # Path
     fish_add_path $HOME/.npm/modules/bin
+    fish_add_path $HOME/.cargo/bin
 end
