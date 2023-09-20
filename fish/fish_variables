@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export EXA_COLORS:\x20\x20\x20\x20\x20\x20\x20\x20uu\x3d36\x3a\x20\x20\x20\x20\x20\x20\x20\x20gu\x3d37\x3a\x20\x20\x20\x20\x20\x20\x20\x20sn\x3d32\x3a\x20\x20\x20\x20\x20\x20\x20\x20sb\x3d32\x3a\x20\x20\x20\x20\x20\x20\x20\x20da\x3d34\x3a\x20\x20\x20\x20\x20\x20\x20\x20ur\x3d34\x3a\x20\x20\x20\x20\x20\x20\x20\x20uw\x3d35\x3a\x20\x20\x20\x20\x20\x20\x20\x20ux\x3d36\x3a\x20\x20\x20\x20\x20\x20\x20\x20ue\x3d36\x3a\x20\x20\x20\x20\x20\x20\x20\x20gr\x3d34\x3a\x20\x20\x20\x20\x20\x20\x20\x20gw\x3d35\x3a\x20\x20\x20\x20\x20\x20\x20\x20gx\x3d36\x3a\x20\x20\x20\x20\x20\x20\x20\x20tr\x3d34\x3a\x20\x20\x20\x20\x20\x20\x20\x20tw\x3d35\x3a\x20\x20\x20\x20\x20\x20\x20\x20tx\x3d36\x3a
 SETUVAR --export EXA_LAAD_OPTIONS:\x2d\x2dall\x1e\x2d\x2dall\x1e\x2d\x2dbinary\x1e\x2d\x2donly\x2ddirs
 SETUVAR --export EXA_LAAID_OPTIONS:\x2d\x2dall\x1e\x2d\x2dall\x1e\x2d\x2dbinary\x1e\x2d\x2dicons\x1e\x2d\x2donly\x2ddirs
 SETUVAR --export EXA_LAAI_OPTIONS:\x2d\x2dall\x1e\x2d\x2dall\x1e\x2d\x2dbinary\x1e\x2d\x2dicons
@@ -19,62 +18,46 @@ SETUVAR --export EXA_LL_OPTIONS:\x2d\x2dlong
 SETUVAR --export EXA_LO_OPTIONS:\x2d\x2doneline
 SETUVAR --export EXA_LT_OPTIONS:\x2d\x2dtree\x1e\x2d\x2dlevel
 SETUVAR --export EXA_L_OPTIONS:\x1d
-SETUVAR --export EXA_STANDARD_OPTIONS:\x2d\x2dicons
+SETUVAR --export EXA_STANDARD_OPTIONS:\x2d\x2dgroup\x1e\x2d\x2dheader\x1e\x2d\x2dgroup\x2ddirectories\x2dfirst\x1e\x2d\x2dicons
 SETUVAR --export __FISH_EXA_ALIASES:l\x1ela\x1eld\x1eli\x1elid\x1elaa\x1elad\x1elai\x1elaid\x1elaad\x1elaai\x1elaaid\x1ell\x1ella\x1elld\x1elli\x1ellid\x1ellaa\x1ellad\x1ellai\x1ellaid\x1ellaad\x1ellaai\x1ellaaid\x1elg\x1elga\x1elgd\x1elgi\x1elgid\x1elgaa\x1elgad\x1elgai\x1elgaid\x1elgaad\x1elgaai\x1elgaaid\x1ele\x1elea\x1eled\x1elei\x1eleid\x1eleaa\x1elead\x1eleai\x1eleaid\x1eleaad\x1eleaai\x1eleaaid\x1elt\x1elta\x1eltd\x1elti\x1eltid\x1eltad\x1eltai\x1eltaid\x1eltaad\x1eltaai\x1eltaaid\x1elc\x1elca\x1elcd\x1elci\x1elcid\x1elcaa\x1elcad\x1elcai\x1elcaid\x1elcaad\x1elcaai\x1elcaaid\x1elo\x1eloa\x1elod\x1eloi\x1eloid\x1eloaa\x1eload\x1eloai\x1eloaid\x1eloaad\x1eloaai\x1eloaaid
 SETUVAR --export __FISH_EXA_BASE_ALIASES:l\x1ell\x1elg\x1ele\x1elt\x1elc\x1elo
+SETUVAR --export __FISH_EXA_BINARY:eza
 SETUVAR --export __FISH_EXA_EXPANDED:a\x1ed\x1ei\x1eid\x1eaa\x1ead\x1eai\x1eaid\x1eaad\x1eaai\x1eaaid
 SETUVAR --export __FISH_EXA_EXPANDED_OPT_NAME:LA\x1eLD\x1eLI\x1eLID\x1eLAA\x1eLAD\x1eLAI\x1eLAID\x1eLAAD\x1eLAAI\x1eLAAID
 SETUVAR --export __FISH_EXA_OPT_NAMES:EXA_L_OPTIONS\x1eEXA_LA_OPTIONS\x1eEXA_LD_OPTIONS\x1eEXA_LI_OPTIONS\x1eEXA_LID_OPTIONS\x1eEXA_LAA_OPTIONS\x1eEXA_LAD_OPTIONS\x1eEXA_LAI_OPTIONS\x1eEXA_LAID_OPTIONS\x1eEXA_LAAD_OPTIONS\x1eEXA_LAAI_OPTIONS\x1eEXA_LAAID_OPTIONS\x1eEXA_LL_OPTIONS\x1eEXA_LG_OPTIONS\x1eEXA_LE_OPTIONS\x1eEXA_LT_OPTIONS\x1eEXA_LC_OPTIONS\x1eEXA_LO_OPTIONS
 SETUVAR --export __FISH_EXA_SORT_OPTIONS:name\x1e\x2ename\x1esize\x1eext\x1emod\x1eold\x1eacc\x1ecr\x1einode
 SETUVAR __fish_initialized:3400
+SETUVAR _fisher_decors_2F_fish_2D_colored_2D_man_files:\x7e/\x2econfig/fish/functions/man\x2efish
 SETUVAR _fisher_gazorby_2F_fish_2D_exa_files:\x7e/\x2econfig/fish/functions/exa_git\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fish\x2dexa\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_hydro_files:\x7e/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_prompt\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/hydro\x2efish
 SETUVAR _fisher_jorgebucaran_2F_spark_2E_fish_files:\x7e/\x2econfig/fish/functions/spark\x2efish\x1e\x7e/\x2econfig/fish/completions/spark\x2efish
-SETUVAR _fisher_patrickf1_2F_colored__man__pages_2E_fish_files:\x7e/\x2econfig/fish/functions/cless\x2efish\x1e\x7e/\x2econfig/fish/functions/man\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/hydro\x1ejorgebucaran/spark\x2efish\x1egazorby/fish\x2dexa\x1epatrickf1/colored_man_pages\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1egazorby/fish\x2dexa\x1ejorgebucaran/hydro\x1ejorgebucaran/spark\x2efish\x1edecors/fish\x2dcolored\x2dman
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR _hydro_git_117369:charles\x2dweb\x2d6923\u2022\x20
-SETUVAR _hydro_git_117667:main\u2022\x20
-SETUVAR _hydro_git_125087:\x1d
-SETUVAR _hydro_git_127295:charles\x2dweb\x2d6923\u2022\x20
-SETUVAR _hydro_git_14418:charles\x2dweb\x2d6923\u2022\x20
-SETUVAR _hydro_git_18374:main\u2022\x20
-SETUVAR _hydro_git_33720:main\x20
-SETUVAR _hydro_git_34194:main\u2022\x20
-SETUVAR _hydro_git_54387:refresh\u2022\x20
-SETUVAR _hydro_git_81631:charles\x2dweb\x2d6923\u2022\x20
-SETUVAR _hydro_git_81652:\x1d
-SETUVAR _hydro_git_81673:refresh\x20
-SETUVAR fish_color_autosuggestion:555\x1ebrblack
+SETUVAR _hydro_git_12660:charles\x2dweb\x2d7844\u2022\x20
+SETUVAR _hydro_git_12828:main\x20
+SETUVAR _hydro_git_129103:refresh\u2022\x20
+SETUVAR _hydro_git_15409:\x1d
+SETUVAR _hydro_git_15583:charles\x2dweb\x2d7235\u2022\x20
+SETUVAR _hydro_git_21940:charles\x2dweb\x2d7235\u2022\x20
+SETUVAR _hydro_git_22101:charles\x2dweb\x2d7235\u2022\x20
+SETUVAR _hydro_git_22208:charles\x2dweb\x2d7235\u2022\x20
+SETUVAR _hydro_git_7151:charles\x2dweb\x2d7235\x20
+SETUVAR _hydro_git_73291:main\x20
+SETUVAR _hydro_git_7336:charles\x2dweb\x2d7235\x20
+SETUVAR _hydro_git_73542:charles\x2dweb\x2d7235\u2022\x20
+SETUVAR _hydro_git_73917:charles\x2dzendesk\x2dbugpage\x20
+SETUVAR _hydro_git_78305:charles\x2dzendesk\x2dbugpage\x20
+SETUVAR _hydro_git_95802:charles\x2dweb\x2d7844\u2022\x20
 SETUVAR fish_color_cancel:\x2dr
-SETUVAR fish_color_command:blue
-SETUVAR fish_color_comment:red
 SETUVAR fish_color_cwd:green
 SETUVAR fish_color_cwd_root:red
-SETUVAR fish_color_end:green
-SETUVAR fish_color_error:brred
-SETUVAR fish_color_escape:brcyan
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:normal
 SETUVAR fish_color_host_remote:yellow
-SETUVAR fish_color_normal:normal
-SETUVAR fish_color_operator:brcyan
-SETUVAR fish_color_param:cyan
-SETUVAR fish_color_quote:yellow
-SETUVAR fish_color_redirection:cyan\x1e\x2d\x2dbold
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
-SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
-SETUVAR fish_greeting:\x1d
 SETUVAR fish_key_bindings:fish_vi_key_bindings
-SETUVAR fish_pager_color_completion:normal
-SETUVAR fish_pager_color_description:B3A06D\x1eyellow\x1e\x2di
-SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
-SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_prompt_pwd_dir_length:100
-SETUVAR fish_user_paths:/home/binarypie/\x2ecargo/bin\x1e/home/binarypie/\x2enpm/modules/bin
-SETUVAR hydro_multiline:true
+SETUVAR fish_user_paths:/home/binarypie/\x2ecargo/bin\x1e/home/binarypie/\x2enpm/modules/bin\x1e/home/binarypie/\x2elocal/bin

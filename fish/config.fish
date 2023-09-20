@@ -1,6 +1,16 @@
 if status is-interactive
     # Variables
     set -x HELIX_RUNTIME /lib64/helix/runtime
+    set -x QT_QPA_PLATFORM wayland
+
+    # No Greeting
+    set -g fish_greeting
+
+    # VIM Mode
+    fish_vi_key_bindings
+
+    # Editor
+    set -gx EDITOR helix
 
     # Prompt
     set --global hydro_multiline true
@@ -11,9 +21,11 @@ if status is-interactive
     set --global hydro_color_prompt $fish_color_command
     set --global hydro_color_duration $fish_color_param
 
-    set -Ux EXA_STANDARD_OPTIONS --icons
+    # Exa
+    set -Ux EXA_STANDARD_OPTIONS --group --header --group-directories-first --icons
 
     # Path
+    fish_add_path $HOME/.local/bin
     fish_add_path $HOME/.npm/modules/bin
     fish_add_path $HOME/.cargo/bin
 end
