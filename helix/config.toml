@@ -8,12 +8,16 @@ auto-pairs = false
 
 [editor.file-picker]
 hidden = false
-parents = false
+parents = true
 
 [editor.indent-guides]
 render = true
 character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = false
 
 [editor.search]
 wrap-around = true
