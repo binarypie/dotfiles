@@ -1,0 +1,7 @@
+import = ["/home/binarypie/.config/alacritty/colors.toml", "/home/binarypie/.config/alacritty/fonts.toml", "/home/binarypie/.config/alacritty/theme.toml"]
+
+[mouse]
+hide_when_typing = false
+
+[window]
+decorations = "none"
