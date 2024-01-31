@@ -55,7 +55,8 @@ themes {
     white "#cdcbe0"
   }
   nightfox {
-    bg "#192330"
+    //bg "#192330"
+    bg "#354458"
     fg "#cdcecf"
     red "#c94f6d"
     green "#81b29a"
