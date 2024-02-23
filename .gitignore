@@ -11,3 +11,4 @@ tmux/plugins
 # Eh
 .netrwhist
 .uuid
+fish/fish_variables

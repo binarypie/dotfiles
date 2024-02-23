@@ -5,3 +5,6 @@ hide_when_typing = false
 
 [window]
 decorations = "none"
+
+[shell]
+program = "/usr/bin/fish"

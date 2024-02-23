@@ -1,0 +1,17 @@
+window {
+   background-image: url("/home/binarypie/.config/gtklock/bg.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-color: black;
+}
+
+#window-box {
+	padding: 64px;
+	border: none;
+}
+
+#window-box input {
+	background-color: black;
+	color: white;
+}

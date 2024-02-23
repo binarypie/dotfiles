@@ -26,6 +26,6 @@ if status is-interactive
 
     # Path
     fish_add_path $HOME/.local/bin
-    fish_add_path $HOME/.npm/modules/bin
+    fish_add_path $HOME/.npm-packages/bin
     fish_add_path $HOME/.cargo/bin
 end
