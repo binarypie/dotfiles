@@ -28,4 +28,15 @@ if status is-interactive
     fish_add_path $HOME/.local/bin
     fish_add_path $HOME/.npm-packages/bin
     fish_add_path $HOME/.cargo/bin
+    fish_add_path $HOME/go/bin
+
+
+    function yy
+        set tmp (mktemp -t "yazi-cwd.XXXXXX")
+        yazi $argv --cwd-file="$tmp"
+        if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+            cd -- "$cwd"
+        end
+        rm -f -- "$tmp"
+    end
 end
